@@ -25,20 +25,13 @@ A sophisticated application for analyzing Zoom chat logs to detect threats, hara
 - **Behavioral Analysis**: Track user patterns, frequency, and escalation
 - **Configurable Rules**: Customizable threat detection patterns and weights
 
-### 🌐 **Modern Web Interface (Current)**
+### 🌐 **Modern Web Interface**
 - **Responsive Design**: Beautiful dark-mode UI with modern aesthetics
 - **Real-time Updates**: Live threat detection with Socket.IO integration
 - **Interactive Dashboard**: Comprehensive analytics with multiple tabs
 - **Drag & Drop Upload**: Intuitive file upload with progress tracking
 - **Batch Processing**: Process entire folders of chat logs efficiently
 - **Cross-platform**: Works on any device with a modern web browser
-
-### 🖥️ **Original Desktop GUI (Legacy)**
-- **Native Application**: Standalone executable for macOS
-- **Tkinter Interface**: Traditional desktop application layout
-- **File-based Processing**: Direct file system integration
-- **Local Processing**: No network dependencies
-- **Simple Interface**: Basic upload and analysis functionality
 
 ### 📊 **Comprehensive Dashboard**
 - **Real-time Metrics**: Live threat counts, user analysis, and risk scoring
@@ -59,7 +52,7 @@ A sophisticated application for analyzing Zoom chat logs to detect threats, hara
 - **PDF/Excel Export**: Professional reports for documentation
 - **Templated Harassment Reports**: Pre-filled forms for official complaints
 
-### Quick Start Guide - Web Version
+### Quick Start Guide 
 
 #### 1. **Upload Files**
 - **Drag & Drop**: Simply drag .txt chat log files into the upload area
@@ -78,18 +71,6 @@ A sophisticated application for analyzing Zoom chat logs to detect threats, hara
 - **Excel Report**: Data analysis and filtering
 - **Evidence Package**: Law enforcement export
 - **Executive Summary**: High-level analysis
-
-### Quick Start Guide - Desktop Version (Legacy)
-
-#### 1. **File Upload**
-- Use the file browser to select .txt chat log files
-- Click "Upload Files" to process individual files
-- Use "Process Folder" for batch processing
-
-#### 2. **View Analysis**
-- Check the threat list for detected issues
-- Review user statistics and patterns
-- Export reports as needed
 
 ## 🔄 Version Comparison
 
@@ -139,15 +120,7 @@ A sophisticated application for analyzing Zoom chat logs to detect threats, hara
 - **Medium-threat users** (6-10 threats): Spam scores 5/10
 - **High-threat users** (10+ threats): Spam scores 7-10/10
 
-### Desktop Version Interface (Legacy)
-
-#### 📋 Basic Layout
-- **File Upload Section**: Simple file browser and upload buttons
-- **Analysis Results**: Basic list of detected threats
-- **Statistics Panel**: Simple metrics display
-- **Export Options**: Basic report generation buttons
-
-## Navigation Tabs (Web Version)
+## Navigation Tabs 
 
 #### 🚨 Threats Tab
 - Real-time threat detection with severity indicators
@@ -211,34 +184,22 @@ Customize threat detection patterns in `config.json`:
 
 ## 🔧 Technical Architecture
 
-### Core Components (Both Versions)
+### Core Components 
 - **`improved_analyzer_core.py`**: Core analysis engine with encryption
 - **`config.json`**: Configuration and threat detection rules
 - **`secure_chat.db`**: SQLite database with encrypted content
-
-### Web Version Components
 - **`advanced_web_analyzer.py`**: Main Flask web application with Socket.IO
 - **HTML5/CSS3**: Modern responsive interface
 - **JavaScript**: Interactive dashboard functionality
 
-### Desktop Version Components (Legacy)
-- **`improved_app_gui.py`**: Main Tkinter GUI application
-- **`build_standalone.py`**: PyInstaller build script
-- **Tkinter**: Native GUI framework
-
-### Web Technologies (Current)
+### Web Technologies 
 - **Flask**: Python web framework
 - **Flask-SocketIO**: Real-time communication
 - **HTML5/CSS3**: Modern responsive interface
 - **JavaScript**: Interactive dashboard functionality
 - **SQLite**: Local database storage
 
-### Desktop Technologies (Legacy)
-- **Tkinter**: Python GUI framework
-- **PyInstaller**: Executable packaging
-- **SQLite**: Local database storage
-
-### Data Flow (Both Versions)
+### Data Flow 
 1. **File Upload** → File selection or drag & drop
 2. **Encryption** → AES-256 encryption of message content
 3. **Analysis** → Threat detection with dynamic scoring
@@ -246,7 +207,7 @@ Customize threat detection patterns in `config.json`:
 5. **Display** → Dashboard with analysis results
 6. **Export** → Professional reports and evidence packages
 
-### Security Features (Both Versions)
+### Security Features 
 - **AES-256 Encryption**: All sensitive data encrypted
 - **SHA-256 Integrity**: File integrity verification
 - **Local Processing**: No external data transmission
@@ -255,7 +216,7 @@ Customize threat detection patterns in `config.json`:
 
 ## 📈 Performance
 
-### Scalability (Both Versions)
+### Scalability 
 - **Large Datasets**: Handles 1000+ chat logs efficiently
 - **Real-time Processing**: Instant analysis and updates
 - **Memory Efficient**: Optimized for large message volumes
@@ -266,34 +227,29 @@ Customize threat detection patterns in `config.json`:
 - **Recommended**: 4GB RAM, 5GB storage
 - **Large Datasets**: 8GB RAM, 20GB storage
 
-### Web Performance (Current)
+### Web Performance 
 - **Real-time Updates**: Socket.IO for live data streaming
 - **Responsive Design**: Works on desktop and mobile devices
 - **Fast Loading**: Optimized for quick dashboard access
 - **Efficient Rendering**: Smooth scrolling and interactions
 
-### Desktop Performance (Legacy)
-- **Native Speed**: Direct system integration
-- **Offline Processing**: No network overhead
-- **System Resources**: Direct access to hardware
-- **File System**: Native file operations
 
 ## 🚨 Threat Detection Capabilities
 
-### Pattern Recognition (Both Versions)
+### Pattern Recognition 
 - **Threats & Harassment**: Verbal abuse, intimidation, blackmail
 - **Doxxing Attempts**: Personal information sharing
 - **Self-Harm Risk**: Suicide threats and dangerous behavior
 - **Spam & Repetition**: Automated or repeated messages
 - **Behavioral Patterns**: Escalating language and frequency
 
-### Dynamic Scoring (Both Versions)
+### Dynamic Scoring 
 - **Context-Aware**: Considers user history and patterns
 - **Escalation Detection**: Identifies increasing threat levels
 - **Frequency Analysis**: Tracks message patterns and timing
 - **Similarity Matching**: Detects repeated or similar threats
 
-### Advanced Features (Both Versions)
+### Advanced Features 
 - **User Behavior Tracking**: Monitor individual user patterns
 - **Threat History**: Track user-specific threat escalation
 - **Message Deduplication**: SHA-256 based duplicate detection
@@ -301,86 +257,23 @@ Customize threat detection patterns in `config.json`:
 
 ## 📊 Reporting Features
 
-### Law Enforcement Package (Both Versions)
+### Dossier Package 
 - **Complete Evidence Export**: All relevant data with integrity hashes
 - **Templated Reports**: Pre-filled harassment complaint forms
 - **Source Documentation**: Original files with backup copies
 - **Chain of Custody**: Cryptographic integrity verification
 
-### Executive Summary (Both Versions)
+### Executive Summary 
 - **High-Level Analysis**: Key metrics and trends
 - **Risk Assessment**: Overall threat level evaluation
 - **Recommendations**: Action items and next steps
 - **Visual Charts**: Threat distribution and patterns
 
-### Export Formats (Both Versions)
+### Export Formats
 - **PDF Reports**: Professional documentation
 - **Excel Reports**: Data analysis and filtering
 - **CSV Export**: Raw data for external analysis
 - **JSON Export**: Structured data for integration
-
-## 🔍 Troubleshooting
-
-### Common Issues - Web Version
-
-#### Application Won't Start
-```bash
-# Check Python version
-python3 --version
-
-# Verify virtual environment
-source venv_secure_analyzer/bin/activate
-
-# Reinstall dependencies
-pip install -r requirements_improved.txt
-pip install flask flask-socketio
-```
-
-#### Port Already in Use
-```bash
-# Kill existing processes
-pkill -f "python advanced_web_analyzer.py"
-
-# Or change port in advanced_web_analyzer.py
-# app.run(host='0.0.0.0', port=8082, debug=True)
-```
-
-#### Web Interface Issues
-```bash
-# Clear browser cache
-# Try different browser
-# Check firewall settings
-# Verify localhost:8081 is accessible
-```
-
-### Common Issues - Desktop Version (Legacy)
-
-#### GUI Won't Display
-```bash
-# Check Tkinter installation
-python3 -c "import tkinter; print('Tkinter available')"
-
-# Reinstall Tkinter
-pip install tkinter
-```
-
-#### Executable Won't Run
-```bash
-# Rebuild executable
-python build_standalone.py
-
-# Check file permissions
-chmod +x ZoomChatThreatAnalyzer.app
-```
-
-### Database Issues (Both Versions)
-```bash
-# Remove corrupted database
-rm secure_chat.db
-
-# Restart application (new database will be created)
-python advanced_web_analyzer.py  # or python improved_app_gui.py
-```
 
 ### Performance Optimization
 - **Large Files**: Process in smaller batches
@@ -390,42 +283,25 @@ python advanced_web_analyzer.py  # or python improved_app_gui.py
 
 ## 🔒 Privacy & Compliance
 
-### Data Protection (Both Versions)
+### Data Protection 
 - **Local Processing**: All analysis performed locally
 - **No Cloud Storage**: Data never leaves your system
 - **Encrypted Storage**: All sensitive data encrypted at rest
 - **Secure Deletion**: Automatic cleanup of low-threat data
 
-### Compliance Features (Both Versions)
+### Compliance Features 
 - **Audit Trail**: Complete processing history
 - **Evidence Integrity**: Cryptographic verification
 - **Export Controls**: Configurable data retention
 - **Access Logs**: User activity tracking
 
-### Security Best Practices (Both Versions)
+### Security Best Practices 
 - **Regular Updates**: Keep dependencies updated
 - **Access Control**: Limit application access
 - **Backup Strategy**: Regular encrypted backups
 - **Monitoring**: Track system performance and usage
 
 ## 🤝 Contributing
-
-### Development Setup
-```bash
-# Clone repository
-git clone <repository-url>
-
-# Install development dependencies
-pip install -r requirements_improved.txt
-pip install flask flask-socketio
-pip install pytest black flake8
-
-# Run tests
-pytest
-
-# Code formatting
-black *.py
-```
 
 ### Code Structure
 - **Web Interface**: Flask-based responsive UI
@@ -450,7 +326,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **User Guide**: This README
 - **API Reference**: Inline code documentation
 - **Configuration**: `config.json` examples
-- **Troubleshooting**: Common issues and solutions
 
 ### Getting Help
 - **Issues**: Check troubleshooting section
@@ -462,54 +337,30 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Version**: v2025.08.26
 - **Python**: 3.9+
 - **Flask**: 2.3+ (web version)
-- **Tkinter**: Built-in (desktop version)
 - **Database**: SQLite with encryption
 - **Platform**: macOS (tested on 14.6.0)
 
 ## 🎨 UI/UX Features
 
-### Modern Design (Web Version)
+### Modern Design 
 - **Dark Mode**: Professional dark theme
 - **Responsive Layout**: Works on all screen sizes
 - **Interactive Elements**: Hover effects and animations
 - **Clean Typography**: Readable and professional fonts
-
-### User Experience (Web Version)
 - **Intuitive Navigation**: Clear tab structure
 - **Real-time Feedback**: Live updates and progress indicators
 - **Drag & Drop**: Easy file upload
 - **Batch Processing**: Efficient bulk operations
 
-### Visual Elements (Web Version)
+### Visual Elements 
 - **Color-coded Threats**: Severity-based color system
 - **Progress Indicators**: Upload and processing status
 - **Interactive Charts**: Data visualization
 - **Professional Icons**: Clear visual hierarchy
 
-### Legacy Interface (Desktop Version)
-- **Native Look**: Traditional desktop application appearance
-- **Simple Layout**: Basic file upload and results display
-- **System Integration**: Native file dialogs and notifications
-- **Offline Operation**: No network dependencies
-
-## 🔄 Migration Guide
-
-### From Desktop to Web Version
-1. **Install Web Dependencies**: `pip install flask flask-socketio`
-2. **Run Web Application**: `python advanced_web_analyzer.py`
-3. **Access via Browser**: Navigate to http://localhost:8081
-4. **Same Data**: Database and configuration files are shared
-
-### From Web to Desktop Version
-1. **Install Tkinter**: Usually included with Python
-2. **Run Desktop App**: `python improved_app_gui.py`
-3. **Same Data**: Database and configuration files are shared
-
 ---
 
 **Advanced Zoom Chat Log Threat Analyzer v2025** - Enterprise-grade threat detection and analysis for Zoom chat logs.
 
-*Built with security, privacy, and usability in mind. Available as both modern web interface and traditional desktop application.*
+*Built with security, privacy, and usability in mind.*
 
-**Web Application**: http://localhost:8081  
-**Desktop Application**: `python improved_app_gui.py`
