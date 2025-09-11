@@ -1,0 +1,12 @@
+
+[09:00:00] Alice: Good morning everyone!
+[09:00:15] Bob: Hey Alice, how's the project going?
+[09:00:30] Alice: Going well, thanks for asking
+[09:01:00] ThreatUser1: I'm going to call your boss about this
+[09:01:15] ThreatUser1: You better watch out
+[09:01:30] Alice: Please stop threatening us
+[09:02:00] ThreatUser1: I'll post your information online if you don't comply
+[09:02:30] Bob: This is inappropriate behavior
+[09:03:00] NewUser: Hey everyone
+[09:03:15] NewUser: Anyone want to collaborate on something cool?
+    

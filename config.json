@@ -1,0 +1,123 @@
+{
+  "rules": [
+    {
+      "name": "Threaten_Call_Boss",
+      "pattern": "\\b(call|contact|tell|report|speak|talk|complain|email|message|notify)\\s+(to\\s+)?(your|the|my)?\\s*(boss|manager|supervisor|employer|company|hr|human resources|ceo|director|lead|admin|administrator)\\b",
+      "weight": 40,
+      "category": "threat",
+      "description": "Threats to contact authority figures"
+    },
+    {
+      "name": "Doxxing_Leak",
+      "pattern": "\\b(post|share|leak|expose|publish|reveal|send|spread|distribute|upload)\\s+(your|their|his|her)?\\s*(info|information|details|data|address|phone|email|photo|picture|image|video|personal|private|number|location|identity|name|family)\\b",
+      "weight": 45,
+      "category": "doxxing",
+      "description": "Threats to expose personal information"
+    },
+    {
+      "name": "Harassment_Insult",
+      "pattern": "\\b(stupid|idiot|moron|dumb|retard|loser|pathetic|worthless|useless|incompetent|failure|joke|clown|fool|ignorant|weak|coward|disgusting|ugly|fat|skinny)\\b",
+      "weight": 25,
+      "category": "harassment",
+      "description": "Personal insults and verbal abuse"
+    },
+    {
+      "name": "Physical_Threat",
+      "pattern": "\\b(kill|hurt|harm|attack|beat|punch|kick|stab|shoot|murder|assault|fight|destroy|break|smash)\\s+(you|your|them|their|him|her)\\b",
+      "weight": 55,
+      "category": "violence",
+      "description": "Threats of physical violence"
+    },
+    {
+      "name": "Meth_Drug_Mention",
+      "pattern": "\\b(meth|methamphetamine|crystal|ice|glass|crank|speed|cocaine|heroin|drug|drugs|dealer|dealing|high|tweaking|pipe|needle|inject|snort|smoke)\\b",
+      "weight": 10,
+      "category": "drugs",
+      "description": "Drug-related content"
+    },
+    {
+      "name": "Coercion_Blackmail",
+      "pattern": "\\b(blackmail|extort|threaten|force|make you|unless you|or else|if you don't|consequences|pay up|shut up|keep quiet|don't tell|or I will|regret|sorry you|wish you|rue the day)\\b",
+      "weight": 35,
+      "category": "coercion",
+      "description": "Blackmail and coercion attempts"
+    },
+    {
+      "name": "Self_Harm_Risk",
+      "pattern": "\\b(kill myself|suicide|end it all|not worth living|want to die|better off dead|self harm|cut myself|overdose|jump off|hang myself|shoot myself|pills|goodbye cruel|final goodbye|last words|no point|hopeless|can't go on)\\b",
+      "weight": 60,
+      "category": "self_harm",
+      "description": "Self-harm and suicide threats"
+    },
+    {
+      "name": "Aggressive_Demand",
+      "pattern": "\\b(do it now|right now|immediately|urgent|asap|hurry up|faster|don't delay|no excuses|no questions|just do it|obey|comply|submit|give me|send me|tell me|show me)\\b",
+      "weight": 20,
+      "category": "aggression",
+      "description": "Aggressive demands and commands"
+    },
+    {
+      "name": "Sexual_Harassment",
+      "pattern": "\\b(sexy|hot|nude|naked|porn|sex|sexual|touch|grab|kiss|date|sleep with|hook up|send pics|show me)\\b",
+      "weight": 30,
+      "category": "sexual",
+      "description": "Sexual harassment and inappropriate content"
+    },
+    {
+      "name": "Stalking_Behavior",
+      "pattern": "\\b(follow|following|watch|watching|track|tracking|find you|know where|see you|waiting for you|outside your|at your house|at your work)\\b",
+      "weight": 40,
+      "category": "stalking",
+      "description": "Stalking and surveillance threats"
+    },
+    {
+      "name": "Hate_Speech",
+      "pattern": "\\b(racist|racism|hate|nazi|supremacist|inferior|subhuman)\\b",
+      "weight": 50,
+      "category": "hate_speech",
+      "description": "Hate speech and discrimination"
+    },
+    {
+      "name": "Financial_Threat",
+      "pattern": "\\b(sue|lawsuit|court|lawyer|attorney|legal action|damages|compensation|pay me|owe me|money|bitcoin|crypto|transfer|wire)\\b",
+      "weight": 25,
+      "category": "financial",
+      "description": "Financial threats and extortion"
+    }
+  ],
+  "spam_threshold": 3,
+  "high_threat_threshold": 7,
+  "auto_cleanup_days": 7,
+  "learning_enabled": true,
+  "adaptive_scoring": true,
+  "pattern_discovery": {
+    "enabled": true,
+    "min_occurrences": 3,
+    "confidence_threshold": 0.6,
+    "max_patterns": 100
+  },
+  "user_profiling": {
+    "enabled": true,
+    "track_escalation": true,
+    "risk_threshold": 5,
+    "history_limit": 50
+  },
+  "reporting": {
+    "include_timeline": true,
+    "include_user_analysis": true,
+    "include_recommendations": true,
+    "export_formats": ["json", "text", "pdf", "excel"]
+  },
+  "security": {
+    "encryption": "AES-256",
+    "hash_algorithm": "SHA-256",
+    "secure_delete": true,
+    "audit_logging": true
+  },
+  "performance": {
+    "batch_size": 100,
+    "cache_size": 1000,
+    "parallel_processing": false,
+    "memory_limit_mb": 512
+  }
+}
