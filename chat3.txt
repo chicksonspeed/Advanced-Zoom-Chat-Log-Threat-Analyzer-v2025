@@ -1,0 +1,13 @@
+
+[11:00:00] Admin: Welcome to today's session
+[11:00:30] EscalatingUser: Hi everyone
+[11:01:00] EscalatingUser: I have a question about the policy
+[11:02:00] Admin: Sure, what's your question?
+[11:03:00] EscalatingUser: Why are you ignoring me?
+[11:04:00] EscalatingUser: This is ridiculous
+[11:05:00] EscalatingUser: You're all incompetent
+[11:06:00] EscalatingUser: I'm going to make sure everyone knows about this
+[11:07:00] EscalatingUser: You'll regret treating me this way
+[11:08:00] EscalatingUser: I know where your office is located
+[11:09:00] EscalatingUser: Maybe I should pay a visit
+    
