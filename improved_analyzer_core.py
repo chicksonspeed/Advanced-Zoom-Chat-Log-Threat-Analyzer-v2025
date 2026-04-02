@@ -107,13 +107,15 @@ class PatternLearner:
                     
                     # Check if pattern is significant
                     if self._is_significant_pattern(pattern):
+                        categories = message.get('threat_categories', ['unknown'])
+                        category = categories[0] if categories else 'unknown'
                         cursor.execute('''
                             INSERT OR REPLACE INTO learned_patterns 
                             (pattern, category, confidence, occurrences, last_seen, effectiveness)
                             VALUES (?, ?, ?, 
                                 COALESCE((SELECT occurrences FROM learned_patterns WHERE pattern = ?), 0) + 1,
                                 ?, ?)
-                        ''', (pattern, message.get('category', 'unknown'), 
+                        ''', (pattern, category, 
                               0.5, pattern, datetime.now(), 0.7))
         
         conn.commit()
@@ -168,7 +170,7 @@ class PatternLearner:
         
         slope = numerator / denominator
         
-        return max(0, min(1, slope / 10))  # Normalize to 0-1
+        return max(0, min(1, slope / 3))  # Normalize to 0-1
     
     def _is_significant_pattern(self, pattern: str) -> bool:
         """Determine if a pattern is significant enough to learn"""
@@ -239,7 +241,7 @@ class PatternLearner:
         conn.close()
         
         if not similar_patterns:
-            return {'risk': 'low', 'confidence': 0.3}
+            return {'risk': 'low', 'confidence': 0.3, 'escalation_rate': 0, 'predicted_next_score': self._predict_next_score(recent_scores)}
         
         # Calculate current escalation rate
         current_escalation = self._calculate_escalation_rate(recent_scores)
@@ -497,7 +499,7 @@ class ImprovedAnalyzerCore:
         duplicate_count = sum(1 for m in recent_messages 
                             if m.get('content_hash') == message_hash)
         
-        if duplicate_count >= self.config['spam_threshold']:
+        if duplicate_count >= self.config['spam_threshold'] - 1:
             return True
         
         # Check for similar messages (fuzzy matching)
@@ -508,7 +510,7 @@ class ImprovedAnalyzerCore:
                 if similarity > 0.8:
                     similar_count += 1
         
-        return similar_count >= self.config['spam_threshold']
+        return similar_count >= self.config['spam_threshold'] - 1
     
     def calculate_similarity(self, text1: str, text2: str) -> float:
         """Calculate text similarity using Jaccard similarity"""
